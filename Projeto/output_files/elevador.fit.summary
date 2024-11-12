@@ -1,0 +1,11 @@
+Fitter Status : Successful - Tue Nov 12 06:17:02 2024
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : elevador
+Top-level Entity Name : counter_up_down
+Family : MAX II
+Device : EPM240T100C5
+Timing Models : Final
+Total logic elements : 3 / 240 ( 1 % )
+Total pins : 6 / 80 ( 8 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )
