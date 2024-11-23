@@ -1,18 +1,33 @@
 module counter_up_down (
-    input clk,
-    input reset,
-    input up_down, // 1 para contar para cima, 0 para contar para baixo
-    output reg [2:0] count
+    input clk, reset, up, down,
+	 output alarm
 );
+	
+	 reg [2:0] count;
 
-    always @(posedge clk or posedge reset) begin
-        if (reset) begin
+    always @ (posedge clk or negedge reset) begin
+        
+		  if (!reset) begin
+		  
             count <= 3'b000; // Reseta o contador para 0
-        end else if (up_down) begin // Contando para cima
-            count <= count + 1;
-        end else begin // Contando para baixo
-            count <= count - 1;
-        end
+				
+        end else begin
+		  
+				if (!up & count != 3'b111)
+				
+					count <= count + 1;
+				
+				else if (!down & count != 3'b000)
+					
+					count <= count - 1;
+					
+				else
+				
+					count <= count;
+					
+			end
     end
+	 
+	 assign alarm = (count == 3'b111);
 
 endmodule

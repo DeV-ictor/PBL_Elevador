@@ -1,5 +1,5 @@
 Analysis & Synthesis report for elevador
-Tue Nov 12 06:17:00 2024
+Fri Nov 22 02:37:29 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -41,13 +41,13 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue Nov 12 06:17:00 2024          ;
+; Analysis & Synthesis Status ; Successful - Fri Nov 22 02:37:29 2024          ;
 ; Quartus Prime Version       ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name               ; elevador                                       ;
 ; Top-level Entity Name       ; counter_up_down                                ;
 ; Family                      ; MAX II                                         ;
-; Total logic elements        ; 3                                              ;
-; Total pins                  ; 6                                              ;
+; Total logic elements        ; 7                                              ;
+; Total pins                  ; 5                                              ;
 ; Total virtual pins          ; 0                                              ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                                  ;
 +-----------------------------+------------------------------------------------+
@@ -140,47 +140,47 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                        ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                          ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------+---------+
-; counter_up_down.v                ; yes             ; User Verilog HDL File  ; C:/Users/Fredi/OneDrive/Documentos/MI - Projeto de Circuitos Digitais/PBL_3/Projeto/counter_up_down.v ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                     ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                       ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
+; counter_up_down.v                ; yes             ; User Verilog HDL File  ; C:/Users/Fredi/OneDrive/Documentos/MI - Projeto de Circuitos Digitais/PBL_3/PBL_Elevador/Projeto/counter_up_down.v ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                 ;
-+---------------------------------------------+---------------+
-; Resource                                    ; Usage         ;
-+---------------------------------------------+---------------+
-; Total logic elements                        ; 3             ;
-;     -- Combinational with no register       ; 0             ;
-;     -- Register only                        ; 0             ;
-;     -- Combinational with a register        ; 3             ;
-;                                             ;               ;
-; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 1             ;
-;     -- 3 input functions                    ; 1             ;
-;     -- 2 input functions                    ; 0             ;
-;     -- 1 input functions                    ; 1             ;
-;     -- 0 input functions                    ; 0             ;
-;                                             ;               ;
-; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 3             ;
-;     -- arithmetic mode                      ; 0             ;
-;     -- qfbk mode                            ; 0             ;
-;     -- register cascade mode                ; 0             ;
-;     -- synchronous clear/load mode          ; 0             ;
-;     -- asynchronous clear/load mode         ; 3             ;
-;                                             ;               ;
-; Total registers                             ; 3             ;
-; I/O pins                                    ; 6             ;
-; Maximum fan-out node                        ; count[0]~reg0 ;
-; Maximum fan-out                             ; 4             ;
-; Total fan-out                               ; 17            ;
-; Average fan-out                             ; 1.89          ;
-+---------------------------------------------+---------------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Total logic elements                        ; 7        ;
+;     -- Combinational with no register       ; 4        ;
+;     -- Register only                        ; 0        ;
+;     -- Combinational with a register        ; 3        ;
+;                                             ;          ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 4        ;
+;     -- 3 input functions                    ; 3        ;
+;     -- 2 input functions                    ; 0        ;
+;     -- 1 input functions                    ; 0        ;
+;     -- 0 input functions                    ; 0        ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 7        ;
+;     -- arithmetic mode                      ; 0        ;
+;     -- qfbk mode                            ; 0        ;
+;     -- register cascade mode                ; 0        ;
+;     -- synchronous clear/load mode          ; 0        ;
+;     -- asynchronous clear/load mode         ; 3        ;
+;                                             ;          ;
+; Total registers                             ; 3        ;
+; I/O pins                                    ; 5        ;
+; Maximum fan-out node                        ; count[0] ;
+; Maximum fan-out                             ; 7        ;
+; Total fan-out                               ; 32       ;
+; Average fan-out                             ; 2.67     ;
++---------------------------------------------+----------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -188,7 +188,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-----------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name     ; Library Name ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-----------------+--------------+
-; |counter_up_down           ; 3 (3)       ; 3            ; 0          ; 6    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |counter_up_down    ; counter_up_down ; work         ;
+; |counter_up_down           ; 7 (7)       ; 3            ; 0          ; 5    ; 0            ; 4 (4)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |counter_up_down    ; counter_up_down ; work         ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -214,23 +214,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Tue Nov 12 06:16:53 2024
+    Info: Processing started: Fri Nov 22 02:37:23 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off elevador -c elevador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file counter_up_down.v
-    Info (12023): Found entity 1: counter_up_down File: C:/Users/Fredi/OneDrive/Documentos/MI - Projeto de Circuitos Digitais/PBL_3/Projeto/counter_up_down.v Line: 1
+    Info (12023): Found entity 1: counter_up_down File: C:/Users/Fredi/OneDrive/Documentos/MI - Projeto de Circuitos Digitais/PBL_3/PBL_Elevador/Projeto/counter_up_down.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file decoder_3to7seg.v
+    Info (12023): Found entity 1: decoder_3to7seg File: C:/Users/Fredi/OneDrive/Documentos/MI - Projeto de Circuitos Digitais/PBL_3/PBL_Elevador/Projeto/decoder_3to7seg.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file decoder_2to7seg.v
+    Info (12023): Found entity 1: decoder_2to7seg File: C:/Users/Fredi/OneDrive/Documentos/MI - Projeto de Circuitos Digitais/PBL_3/PBL_Elevador/Projeto/decoder_2to7seg.v Line: 1
 Info (12127): Elaborating entity "counter_up_down" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at counter_up_down.v(12): truncated value with size 32 to match size of target (3) File: C:/Users/Fredi/OneDrive/Documentos/MI - Projeto de Circuitos Digitais/PBL_3/Projeto/counter_up_down.v Line: 12
-Warning (10230): Verilog HDL assignment warning at counter_up_down.v(14): truncated value with size 32 to match size of target (3) File: C:/Users/Fredi/OneDrive/Documentos/MI - Projeto de Circuitos Digitais/PBL_3/Projeto/counter_up_down.v Line: 14
-Info (21057): Implemented 9 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 3 logic cells
+Warning (10230): Verilog HDL assignment warning at counter_up_down.v(18): truncated value with size 32 to match size of target (3) File: C:/Users/Fredi/OneDrive/Documentos/MI - Projeto de Circuitos Digitais/PBL_3/PBL_Elevador/Projeto/counter_up_down.v Line: 18
+Warning (10230): Verilog HDL assignment warning at counter_up_down.v(22): truncated value with size 32 to match size of target (3) File: C:/Users/Fredi/OneDrive/Documentos/MI - Projeto de Circuitos Digitais/PBL_3/PBL_Elevador/Projeto/counter_up_down.v Line: 22
+Info (21057): Implemented 12 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 7 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4709 megabytes
-    Info: Processing ended: Tue Nov 12 06:17:00 2024
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 4705 megabytes
+    Info: Processing ended: Fri Nov 22 02:37:29 2024
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:05
 
 

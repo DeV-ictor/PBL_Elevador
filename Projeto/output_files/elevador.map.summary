@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Tue Nov 12 06:17:00 2024
+Analysis & Synthesis Status : Successful - Fri Nov 22 02:37:29 2024
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : elevador
 Top-level Entity Name : counter_up_down
 Family : MAX II
-Total logic elements : 3
-Total pins : 6
+Total logic elements : 7
+Total pins : 5
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )
