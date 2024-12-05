@@ -1,0 +1,9 @@
+Analysis & Synthesis Status : Successful - Thu Dec  5 04:05:00 2024
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : elevador
+Top-level Entity Name : decoder_3callsto2
+Family : MAX II
+Total logic elements : 2
+Total pins : 5
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

@@ -1,0 +1,13 @@
+|decoder_3callsto2
+A => B0.IN0
+A => B1.IN0
+A => B1.IN0
+B => B1.IN1
+B => B1.IN1
+C => B1.IN1
+C => B0.IN1
+C => B1.IN1
+B0 <= B0.DB_MAX_OUTPUT_PORT_TYPE
+B1 <= B1.DB_MAX_OUTPUT_PORT_TYPE
+
+

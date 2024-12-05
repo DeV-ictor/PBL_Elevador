@@ -1,0 +1,75 @@
+module elevador (
+    input clk,         // Clock
+    input rst,         // Reset
+    input P,           // Estado da porta (1: aberta)
+    input B0, B1,      // Chamadas do elevador
+);
+
+    // Definindo os estados usando parâmetros
+    parameter ANDAR1 = 2'b00;
+    parameter ANDAR2 = 2'b01;
+    parameter ANDAR3 = 2'b10;
+    parameter VAZIO = 2'b11;
+
+    // Registro para o estado atual e próximo estado
+
+    output reg [1:0] estado_atual, proximo_estado;
+
+    // Lógica de Transição de Estado
+    always @(posedge clk or posedge rst) begin
+        if (rst) begin
+            estado_atual <= ANDAR1; // Estado inicial
+        end else begin
+            estado_atual <= proximo_estado;
+        end
+    end
+
+    // Lógica de Próximo Estado
+    always @(*) begin
+        proximo_estado = estado_atual; // Estado padrão é o estado atual
+        
+        if (P == 1) begin
+            case (estado_atual)
+                ANDAR1: 
+
+                    if (B0 == 0 && B1 == 1)
+
+                        proximo_estado = ANDAR2;
+
+                    else if (B0 == 1 && B1 == 0)
+
+                        proximo_estado = ANDAR3;
+
+                    else
+
+                        proximo_estado = estado_atual;
+
+                end
+
+                ANDAR2: begin
+                    if (B0 == 0 && B1 == 0)
+                        proximo_estado = ANDAR1;
+                    else if (B0 == 1 && B1 == 1)
+                        proximo_estado = ANDAR3;
+                end
+                ANDAR3: begin
+                    if (B0 == 0 && B1 == 0)
+                        proximo_estado = ANDAR1;
+                    else if (B0 == 0 && B1 == 1)
+                        proximo_estado = ANDAR2;
+                end
+                CHAMADA: begin
+                    proximo_estado = ANDAR1;
+                end
+                default: begin
+                    proximo_estado = ANDAR1; // Estado padrão de fallback
+                end
+            endcase
+        end
+    end
+
+    // Saídas
+    assign EA = estado_atual;
+    assign EAP = proximo_estado;
+
+endmodule
