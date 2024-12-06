@@ -1,0 +1,8 @@
+|mef_door
+clk => state.CLK
+reset => state.ACLR
+alarm => nextstate.DATAA
+calls => nextstate.LATCH_ENABLE
+door <= state.DB_MAX_OUTPUT_PORT_TYPE
+
+
