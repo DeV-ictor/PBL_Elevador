@@ -1,6 +1,6 @@
 module mef_elevator (
     input clk,         // Clock
-    input rst,         // Reset
+    input reset,         // Reset
     input P,           // Estado da porta (1: fechada)
     input B0, B1,      // Chamadas do elevador
 	 output [1:0] EA, Engine
@@ -17,9 +17,9 @@ module mef_elevator (
     reg [1:0] estado_atual, proximo_estado;
 
     // Lógica de Transição de Estado
-    always @(posedge clk or negedge rst) begin
+    always @(posedge clk or posedge reset) begin
 	 
-        if (!rst) begin
+        if (reset) begin
 		  
             estado_atual <= ANDAR1; // Estado inicial
 				

@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100C5
-set_global_assignment -name TOP_LEVEL_ENTITY mef_door
+set_global_assignment -name TOP_LEVEL_ENTITY system
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 23.1STD.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "06:14:26  NOVEMBER 12, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.1 Lite Edition"
@@ -87,3 +87,4 @@ set_global_assignment -name VERILOG_FILE mef_people.v
 set_global_assignment -name VERILOG_FILE mef_elevator.v
 set_global_assignment -name VERILOG_FILE mef_door.v
 set_global_assignment -name VERILOG_FILE system.v
+set_global_assignment -name VERILOG_FILE door_var.v

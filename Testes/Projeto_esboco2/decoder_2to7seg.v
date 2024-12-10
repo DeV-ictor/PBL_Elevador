@@ -14,7 +14,7 @@ module decoder_2to7seg (
 			  
 			  2'b10: seg = 7'b0000110; // 3
 			  
-			  2'b11: seg = 7'b1001111;
+			  2'b11: seg = 7'b1001111; // 1
 			  
 			  default: seg = 7'b1001111;
 			  

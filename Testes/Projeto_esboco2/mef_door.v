@@ -8,9 +8,9 @@ module mef_door (
 	
 	reg state, nextstate;
 	
-	always @ (posedge clk or negedge reset) begin
+	always @ (posedge clk or posedge reset) begin
 	
-		if (!reset)
+		if (reset)
 		
 			state <= OPEN; // Estado inicial
 		
