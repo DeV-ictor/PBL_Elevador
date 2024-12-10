@@ -4,7 +4,7 @@ module clkdivider96 (
     output reg clk_div_96
 );
 
-	localparam constNumber = 520833;
+	localparam constNumber = 130208;
 
 	reg [31:0] count;
 	 

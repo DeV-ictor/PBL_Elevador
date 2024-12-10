@@ -1,7 +1,11 @@
 
-State Machine - |elevador|estado_atual
-Name estado_atual.NONE estado_atual.ANDAR3 estado_atual.ANDAR2 estado_atual.ANDAR1 
-estado_atual.ANDAR1 0 0 0 0 
-estado_atual.ANDAR2 0 0 1 1 
-estado_atual.ANDAR3 0 1 0 1 
-estado_atual.NONE 1 0 0 1 
+State Machine - |counter_up_down|state
+Name state.S7 state.S6 state.S5 state.S4 state.S3 state.S2 state.S1 state.S0 
+state.S0 0 0 0 0 0 0 0 0 
+state.S1 0 0 0 0 0 0 1 1 
+state.S2 0 0 0 0 0 1 0 1 
+state.S3 0 0 0 0 1 0 0 1 
+state.S4 0 0 0 1 0 0 0 1 
+state.S5 0 0 1 0 0 0 0 1 
+state.S6 0 1 0 0 0 0 0 1 
+state.S7 1 0 0 0 0 0 0 1 

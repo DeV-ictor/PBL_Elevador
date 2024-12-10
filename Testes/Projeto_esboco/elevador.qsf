@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100C5
-set_global_assignment -name TOP_LEVEL_ENTITY decoder_3callsto2
+set_global_assignment -name TOP_LEVEL_ENTITY system
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 23.1STD.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "06:14:26  NOVEMBER 12, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.1 Lite Edition"
@@ -53,10 +53,8 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
-set_global_assignment -name VERILOG_FILE counter_up_down.v
 set_global_assignment -name VERILOG_FILE decoder_3to7seg.v
 set_global_assignment -name VERILOG_FILE decoder_2to7seg.v
-set_global_assignment -name VERILOG_FILE elevador.v
 set_location_assignment PIN_12 -to clk
 set_global_assignment -name VERILOG_FILE Display.v
 set_location_assignment PIN_35 -to A_0
@@ -71,11 +69,22 @@ set_location_assignment PIN_98 -to D
 set_location_assignment PIN_100 -to E
 set_location_assignment PIN_92 -to F
 set_location_assignment PIN_39 -to G
-set_location_assignment PIN_66 -to DIG1
-set_location_assignment PIN_68 -to DIG2
+set_location_assignment PIN_88 -to DIG1
+set_location_assignment PIN_66 -to DIG2
 set_location_assignment PIN_36 -to reset
-set_location_assignment PIN_56 -to out_clock
+set_location_assignment PIN_76 -to out_clock
 set_global_assignment -name VERILOG_FILE mux_2x1_lvl_ppl.v
 set_global_assignment -name VERILOG_FILE clkdivider1.v
 set_global_assignment -name VERILOG_FILE clkdivider96.v
 set_global_assignment -name VERILOG_FILE decoder_3callsto2.v
+set_location_assignment PIN_68 -to DIG3
+set_location_assignment PIN_37 -to DIG4
+set_location_assignment PIN_75 -to alarm
+set_location_assignment PIN_34 -to P
+set_location_assignment PIN_52 -to UP
+set_location_assignment PIN_44 -to DOWN
+set_global_assignment -name VERILOG_FILE mef_people.v
+set_global_assignment -name VERILOG_FILE mef_elevator.v
+set_global_assignment -name VERILOG_FILE mef_door.v
+set_global_assignment -name VERILOG_FILE system.v
+set_global_assignment -name VERILOG_FILE door_var.v
