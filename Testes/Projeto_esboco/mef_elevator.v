@@ -47,7 +47,7 @@ module mef_elevator (
 
                     else if (B0 == 1 && B1 == 0)
 
-                        proximo_estado = ANDAR3;
+                        proximo_estado = ANDAR2;
 
                     else
 
@@ -59,7 +59,7 @@ module mef_elevator (
 						  
                         proximo_estado = ANDAR1;
 								
-                    else if (B0 == 1 && B1 == 1)
+                    else if (B0 == 1 && B1 == 0)
 						  
                         proximo_estado = ANDAR3;
 								
@@ -71,7 +71,7 @@ module mef_elevator (
 					 
                     if (B0 == 0 && B1 == 0)
 						  
-                        proximo_estado = ANDAR1;
+                        proximo_estado = ANDAR2;
 								
                     else if (B0 == 0 && B1 == 1)
 						  

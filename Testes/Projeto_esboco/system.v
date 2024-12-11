@@ -1,7 +1,7 @@
 module system (
 	input clk, reset, // Entradas gerais de clock e reset
 	input Up, Down, // Entradas para controlar o número de pessoas
-	input A_e, B_e, C_e,  // Chamadas do elevador
+	input A_e, B_e, C_e, A_i, B_i, C_i,  // Chamadas do elevador
 	output A, B, C, D, E, F, G, P, DIG1, DIG2, DIG3, DIG4 // Saídas do display
 );
 
@@ -11,7 +11,7 @@ module system (
 	
 	not (not_reset, reset);
 	
-	// 1Hz
+		// 1Hz
 
 	clkdivider1 clk_inst1 (
 		.clk(clk),
@@ -19,7 +19,7 @@ module system (
 		.clk_div_1(clk1)
 	);
 	
-	// 96Hz
+		// 96Hz
 	
 	clkdivider96 clk_inst2 (
 		.clk(clk),
@@ -81,9 +81,12 @@ module system (
 	wire B0, B1;
 			
 	decoder_3callsto2 decoder_calls_inst (
-		.A(A_e),
-		.B(B_e),
-		.C(C_e),
+		.A_e(A_e),
+		.B_e(B_e),
+		.C_e(C_e),
+		.A_i(A_i),
+		.B_i(B_i),
+		.C_i(C_i),
 		.B0(B0),
 		.B1(B1)
 	);
@@ -123,6 +126,5 @@ module system (
 		.DIG3(DIG3),
 		.DIG4(DIG4)
 	);
-
 
 endmodule
