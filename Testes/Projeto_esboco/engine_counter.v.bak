@@ -1,0 +1,32 @@
+module engine_counter (
+  input  wire clk, // Sinal de clock
+  input  wire reset, // Sinal de reset
+  output wire [2:0] count  // Saída do contador (3 bits)
+);
+
+  reg [2:0] count_reg; // Registrador para armazenar o valor do contador
+
+  // Reset síncrono
+  always @(posedge clk or posedge reset) begin
+  
+    if (reset) begin
+	 
+      count_reg <= 3'b000; // Reseta o contador para 0
+		
+    end else begin
+	 
+      if (count_reg == 3'b111) begin
+		
+        count_reg <= 3'b000; // Reseta o contador para 0 se ele chegar a 7
+		  
+      end else begin
+		
+        count_reg <= count_reg + 1; // Incrementa o contador
+		  
+      end
+    end
+  end
+
+  assign count = count_reg; // Atribui o valor do registrador à saída
+
+endmodule

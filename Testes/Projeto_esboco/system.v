@@ -3,7 +3,8 @@ module system (
 	input Up, Down, // Entradas para controlar o número de pessoas
 	input A_e, B_e, C_e, A_i, B_i, C_i,  // Chamadas do elevador
 	output A, B, C, D, E, F, G, P, DIG1, DIG2, DIG3, DIG4, // Saídas do display
-	output alarme, door_o, door_c
+	output alarme, door_o, door_c, // Saídas do alarme e da porta
+	output [9:0] LEDS
 );
 
 	// Frequências para funcionamento do circuito - begin
@@ -22,7 +23,7 @@ module system (
 	
 		// 96Hz
 	
-	clkdivider96 clk_inst2 (
+	clkdivider96 clk_inst3 (
 		.clk(clk),
 		.rst(not_reset),
 		.clk_div_96(clk96)	
@@ -92,7 +93,7 @@ module system (
 		.B1(B1)
 	);
 	
-	wire EA [1:0];
+	wire [1:0] EA, engine;
 	
 	mef_elevator mef_e_inst (
 		.clk(clk1),
@@ -100,12 +101,15 @@ module system (
 		.B0(B0),
 		.B1(B1),
 		.P(door_state),
-		.EA({EA[0], EA[1]})
+		.EA({EA[0], EA[1]}),
+		.Engine({engine[0], engine[1]})
 	);
 	
 			// Elevador - end
 	
 	// Máquinas de estado do circuito - end
+	
+	// Display - begin
 	
 	Display display_inst (
 		.clk96(clk96),
@@ -127,9 +131,14 @@ module system (
 		.DIG3(DIG3),
 		.DIG4(DIG4)
 	);
+
+	// Display - end
 	
-	assign alarme = alarm;
-	assign door_c = door_state;
-	assign door_o = !door_state;
+	assign LEDS[4:0] = engine[0];
+	assign LEDS[9:9] = engine[1];
+	
+	assign alarme = alarm; // alarme
+	assign door_c = door_state; // porta fechada
+	assign door_o = !door_state; // porta aberta
 
 endmodule
