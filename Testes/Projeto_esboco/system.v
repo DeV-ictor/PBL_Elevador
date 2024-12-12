@@ -2,7 +2,8 @@ module system (
 	input clk, reset, // Entradas gerais de clock e reset
 	input Up, Down, // Entradas para controlar o número de pessoas
 	input A_e, B_e, C_e, A_i, B_i, C_i,  // Chamadas do elevador
-	output A, B, C, D, E, F, G, P, DIG1, DIG2, DIG3, DIG4 // Saídas do display
+	output A, B, C, D, E, F, G, P, DIG1, DIG2, DIG3, DIG4, // Saídas do display
+	output alarme, door_o, door_c
 );
 
 	// Frequências para funcionamento do circuito - begin
@@ -126,5 +127,9 @@ module system (
 		.DIG3(DIG3),
 		.DIG4(DIG4)
 	);
+	
+	assign alarme = alarm;
+	assign door_c = door_state;
+	assign door_o = !door_state;
 
 endmodule

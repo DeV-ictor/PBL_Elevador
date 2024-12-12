@@ -1,11 +1,11 @@
-Fitter Status : Successful - Tue Dec 10 16:17:37 2024
-Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Fitter Status : Successful - Wed Dec 11 16:07:09 2024
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : elevador
-Top-level Entity Name : system
+Top-level Entity Name : engine
 Family : MAX II
 Device : EPM240T100C5
 Timing Models : Final
-Total logic elements : 162 / 240 ( 68 % )
-Total pins : 19 / 80 ( 24 % )
+Total logic elements : 7 / 240 ( 3 % )
+Total pins : 22 / 80 ( 28 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

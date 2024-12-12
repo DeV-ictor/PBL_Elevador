@@ -10,48 +10,55 @@ module mef_door (
 	
 	always @ (posedge clk or posedge reset) begin
 	
-		if (reset)
+		if (reset) begin
 		
 			state <= OPEN; // Estado inicial
 		
-		else
+		end else begin
 		
 			state <= nextstate;
-		
+			
+		end
 	end
 	
-	always @ (*) begin
+	always @(*) begin
 	
-		if (calls) begin
+		nextstate = state;
+	
+		if (calls == 1) begin
 				
 			case (state)
 			
 				OPEN: 
 					
-					if (!alarm) 
+					if (alarm == 0) 
 						
 						nextstate = CLOSED;
-					
+
 					else
 						
-						nextstate = state;
+						nextstate = OPEN;
 						
 				CLOSED: 
 					
-					if (!alarm) 
+					if (alarm == 0) 
 						
 						nextstate = CLOSED;
 					
 					else
 						
-						nextstate = state;
+						nextstate = OPEN;
 						
 				default:
 						
 						nextstate = OPEN;
 						
-			endcase
-		end
+			 endcase
+			 
+		end else
+		
+			nextstate = OPEN;
+		
 	end
 	
 	assign door = state;

@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Tue Dec 10 16:17:35 2024
-Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Analysis & Synthesis Status : Successful - Wed Dec 11 16:07:08 2024
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : elevador
-Top-level Entity Name : system
+Top-level Entity Name : engine
 Family : MAX II
-Total logic elements : 177
-Total pins : 19
+Total logic elements : 7
+Total pins : 22
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )
