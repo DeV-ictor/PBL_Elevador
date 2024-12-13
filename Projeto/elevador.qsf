@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100C5
-set_global_assignment -name TOP_LEVEL_ENTITY counter_up_down
+set_global_assignment -name TOP_LEVEL_ENTITY system
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 23.1STD.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "06:14:26  NOVEMBER 12, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.1 Lite Edition"
@@ -48,13 +48,47 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
 set_global_assignment -name POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR 3.3V
-set_global_assignment -name EDA_SIMULATION_TOOL "Questa Intel FPGA (Verilog)"
-set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
-set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_SIMULATION_TOOL "<None>"
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
-set_global_assignment -name VERILOG_FILE counter_up_down.v
 set_global_assignment -name VERILOG_FILE decoder_3to7seg.v
 set_global_assignment -name VERILOG_FILE decoder_2to7seg.v
+set_global_assignment -name VERILOG_FILE Display.v
+set_global_assignment -name VERILOG_FILE mux_2x1_lvl_ppl.v
+set_global_assignment -name VERILOG_FILE clkdivider1.v
+set_global_assignment -name VERILOG_FILE clkdivider96.v
+set_global_assignment -name VERILOG_FILE decoder_3callsto2.v
+set_global_assignment -name VERILOG_FILE mef_people.v
+set_global_assignment -name VERILOG_FILE mef_elevator.v
+set_global_assignment -name VERILOG_FILE mef_door.v
+set_global_assignment -name VERILOG_FILE system.v
+set_global_assignment -name VERILOG_FILE door_var.v
+set_location_assignment PIN_96 -to P
+set_location_assignment PIN_12 -to clk
+set_location_assignment PIN_48 -to reset
+set_location_assignment PIN_70 -to B
+set_location_assignment PIN_90 -to A
+set_location_assignment PIN_41 -to C
+set_location_assignment PIN_98 -to D
+set_location_assignment PIN_88 -to DIG1
+set_location_assignment PIN_66 -to DIG2
+set_location_assignment PIN_68 -to DIG3
+set_location_assignment PIN_37 -to DIG4
+set_location_assignment PIN_100 -to E
+set_location_assignment PIN_92 -to F
+set_location_assignment PIN_39 -to G
+set_location_assignment PIN_52 -to Up
+set_location_assignment PIN_44 -to Down
+set_location_assignment PIN_35 -to A_e
+set_location_assignment PIN_33 -to B_e
+set_location_assignment PIN_30 -to C_e
+set_location_assignment PIN_38 -to A_i
+set_location_assignment PIN_40 -to B_i
+set_location_assignment PIN_42 -to C_i
+set_location_assignment PIN_43 -to alarme
+set_location_assignment PIN_86 -to door_c
+set_location_assignment PIN_72 -to door_o
+set_global_assignment -name VERILOG_FILE engine_counter.v
+set_global_assignment -name VERILOG_FILE clkdivider7.v

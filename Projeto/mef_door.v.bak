@@ -1,0 +1,34 @@
+module mef_door (
+	input clk, reset, alarm, calls
+);
+
+	parameter OPEN = 1'b0;
+	parameter CLOSED = 1'b1;
+	
+	reg state, nextstate;
+	
+	always @(posedge clk or negedge reset) begin
+	
+		if (!reset)
+		
+			state <= OPEN; // Estado inicial
+		
+		else
+		
+			state <= nexstate;
+		
+	end
+	
+	always @(*) begin
+				
+		if (calls & !alarm)
+			
+			nextstate = CLOSED;
+			
+		else
+		
+			nextstate = OPEN;
+	
+	end
+
+endmodule
